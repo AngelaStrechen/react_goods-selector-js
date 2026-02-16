@@ -46,6 +46,7 @@ export const App = () => {
               >
                 <td>
                   {isSelected ? (
+                    // RemoveButton для вибраного рядка
                     <button
                       data-cy="RemoveButton"
                       type="button"
@@ -55,7 +56,7 @@ export const App = () => {
                       -
                     </button>
                   ) : (
-                    // AddButton рендериться для кожного не вибраного товару
+                    // AddButton для всіх не вибраних рядків
                     <button
                       data-cy="AddButton"
                       type="button"
