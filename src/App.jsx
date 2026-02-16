@@ -2,21 +2,21 @@ import { useState } from 'react';
 import 'bulma/css/bulma.css';
 import './App.scss';
 
-export const goods = [
-  'Dumplings',
-  'Carrot',
-  'Eggs',
-  'Ice cream',
-  'Apple',
-  'Bread',
-  'Fish',
-  'Honey',
-  'Jam',
-  'Garlic',
-];
-
 export const App = () => {
   const [selectedGood, setSelectedGood] = useState('Jam');
+
+  const goods = [
+    'Dumplings',
+    'Carrot',
+    'Eggs',
+    'Ice cream',
+    'Apple',
+    'Bread',
+    'Fish',
+    'Honey',
+    'Jam',
+    'Garlic',
+  ];
 
   return (
     <main className="section container">
@@ -55,12 +55,12 @@ export const App = () => {
                       -
                     </button>
                   ) : (
+                    // AddButton рендериться для кожного не вибраного товару
                     <button
                       data-cy="AddButton"
                       type="button"
                       className="button"
                       onClick={() => setSelectedGood(good)}
-                      hidden={!!selectedGood}
                     >
                       +
                     </button>
